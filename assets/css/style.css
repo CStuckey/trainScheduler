@@ -1,0 +1,57 @@
+body {
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  background: url("../images/topography.png");
+}
+
+/** {
+  box-sizing: border-box;
+}*/
+
+/* Constraints for the webpage */
+.container {
+  clear: both;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+}
+
+/* Jumbotron */
+.vertical-center {
+  text-align: center;
+}
+
+/* Table */
+.table {
+  margin-left: 15px;
+  margin-right: 15px;
+  
+}
+
+tr {
+  width: 97%;
+}
+
+
+/* Form */
+.panel-heading {
+    margin-bottom: 10px;
+}
+
+.form-group {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#submit {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+
+h1 {
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+
+
