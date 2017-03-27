@@ -57,7 +57,7 @@ database.ref().on("child_added", function(snapshot) {
 
   // console.log(trainName);  
 
-  var firstTimeConverted = moment(firstTrainTime, "HH:mm").subtract(1, "years");
+  var firstTimeConverted = moment(firstTrainTime, "HH:mm"); //.subtract(1, "years");
   console.log(firstTimeConverted);
 
   // Current time
@@ -77,7 +77,9 @@ database.ref().on("child_added", function(snapshot) {
 
   // Next Arrival
   var nextArrival = moment().add(tMinutesTillTrain, "minutes");
-  console.log("Arrival time: " + moment(nextArrival).format("HH:mm"));
+  nextArrival = moment(nextArrival).format("HH:mm")
+  console.log("Arrival time: " + nextArrival);
+  console.log(nextArrival);
 
 
 
@@ -98,7 +100,8 @@ database.ref().on("child_added", function(snapshot) {
   td = $("<td>");
 
   // Gap for Next Arrival
-  td.append(snapshot.val().nextArrival);
+  td.append(nextArrival);
+  console.log(nextArrival);
   tr.append(td);
   td = $("<td>");
 
@@ -108,6 +111,13 @@ database.ref().on("child_added", function(snapshot) {
   td = $("<td>");
 
   $("tbody").append(tr);
+
+  
+
+  // Add each train's data into the table
+  // $("#employee-table > tbody").append("<tr><td>" + empName + "</td><td>" + empRole + "</td><td>" +
+  // empStartPretty + "</td><td>" + empMonths + "</td><td>" + empRate + "</td><td>" + empBilled + "</td></tr>");
+
 
 });
 
